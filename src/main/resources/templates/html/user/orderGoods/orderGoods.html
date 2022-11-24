@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <style>
+        table tr td{
+            border: 1px #000 solid;
+        }
+        a{
+            color: #000000;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h1>
+        <a href="/user/" style="text-decoration: none;">这里是LOGO</a>
+    </h1>
+</div>
+<div>
+    <form action="" method="get">
+        <table>
+            <tr>
+                <td>商品名称</td>
+                <td>数量</td>
+                <td>价格</td>
+            </tr>
+            <tr th:each="order,stats:${orderGoodsByUid}">
+                <td th:text="${order.commodity.gname}"></td>
+                <td align="center">
+                    <a th:href="'/orderGoods/OrderGoodsQuantity?gid='+${order.gid}+'&uid='+${order.uid}+'&addOrSubtract=0'">[-]</a>
+                    [[${order.ogamount}]]
+                    <a th:href="'/orderGoods/OrderGoodsQuantity?gid='+${order.gid}+'&uid='+${order.uid}+'&addOrSubtract=1'">[+]</a>
+                </td>
+                <td th:text="${order.ogtotalprice}"></td>
+                <div th:if="${gxsb} != null">
+                    <td>[[${gxsb}]]</td>
+                </div>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

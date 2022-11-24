@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="icu.javacg.mapper.UserMapper">
+
+<!--&lt;!&ndash;    List<User> getAllUser();&ndash;&gt;-->
+<!--    <select id="getAllUser" resultType="icu.javacg.pojo.User">-->
+<!--        select * from user-->
+<!--    </select>-->
+
+<!--&lt;!&ndash;    List<User> getUserByCondition(User user);&ndash;&gt;-->
+<!--    <select id="getUserByCondition" resultType="icu.javacg.pojo.User">-->
+<!--        select * from user-->
+<!--        <where>-->
+<!--            <if test="user.uId != null and user.uId != ''">-->
+<!--                uid = #{user.uid}-->
+<!--            </if>-->
+<!--            <if test="user.uName != null and user.uName != ''">-->
+<!--                and uname = #{user.uname}-->
+<!--            </if>-->
+<!--            <if test="user.uPwd != null and user.uPwd != ''">-->
+<!--                and upwd = #{user.upwd}-->
+<!--            </if>-->
+<!--            <if test="user.uEmail != null and user.uEmail != ''">-->
+<!--                and uemail = #{user.uemail}-->
+<!--            </if>-->
+<!--        </where>-->
+<!--    </select>-->
+
+<!--&lt;!&ndash;    Integer updateUser(User user);&ndash;&gt;-->
+<!--    <update id="updateUser">-->
+<!--        update user-->
+<!--        <trim prefix="set" suffixOverrides=",">-->
+<!--            <if test="user.uName != null and user.uName != ''">-->
+<!--                uname = #{user.uname},-->
+<!--            </if>-->
+<!--            <if test="user.uPwd != null and user.uPwd != ''">-->
+<!--                upwd = #{user.upwd},-->
+<!--            </if>-->
+<!--            <if test="user.uEmail != null and user.uEmail != ''">-->
+<!--                uemail = #{user.uemail}-->
+<!--            </if>-->
+<!--        </trim>-->
+<!--        where uid = #{user.uid}-->
+<!--    </update>-->
+
+<!--&lt;!&ndash;    Integer deleteUser(@Param("uid") Integer uid);&ndash;&gt;-->
+<!--    <delete id="deleteUser">-->
+<!--        delete from user where uid = #{uid}-->
+<!--    </delete>-->
+
+<!--&lt;!&ndash;    Integer insetUser(@Param("user") User user);&ndash;&gt;-->
+<!--    <insert id="insetUser">-->
+<!--        insert into user(uname,upwd,uemail) values (#{user.uname}, #{user.upwd}, #{user.uemail})-->
+<!--    </insert>-->
+</mapper>

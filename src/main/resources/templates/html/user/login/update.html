@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户资料修改</title>
+  <style>
+    a{
+      color: #333333;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+<div>
+  <h1>
+    <a href="/user/" style="text-decoration: none;">这里是LOGO</a>
+  </h1>
+</div>
+<form action="/user/updateUser" method="post">
+  <table>
+    <thead>
+    <h3>用户资料修改</h3>
+    <p style="color: green" th:text="${update}"></p>
+    </thead>
+    <tr>
+      <td><input type="hidden" name="uid" th:value="${#session.getAttribute('user').uid}"></td>
+    </tr>
+    <tr>
+      <td>
+        用户名：
+      </td>
+      <td>
+        <input type="text" name="username" th:value="${#session.getAttribute('user').uname}">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        密码：
+      </td>
+      <td>
+        <input type="password" name="password" th:value="${#session.getAttribute('user').upwd}">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        邮箱：
+      </td>
+      <td>
+        <input type="text" name="email" th:value="${#session.getAttribute('user').uemail}">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="submit" value="提交">
+      </td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

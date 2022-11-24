@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>商品详情</title>
+    <style>
+        table tr td{
+            border: 1px red solid;
+        }
+        a{
+            color: #333333;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h1>
+        <a href="/user/" style="text-decoration: none;">这里是LOGO</a>
+    </h1>
+</div>
+<div>
+    <table>
+        <tr>
+            <td>图片</td>
+            <td>名称</td>
+            <td>价格</td>
+            <td>类别</td>
+            <td>库存</td>
+            <td>上架时间</td>
+            <td>浏览量</td>
+            <td>作者</td>
+            <td>简介</td>
+            <td>操作</td>
+        </tr>
+        <tr>
+            <td>
+                <img width="50%" height="50%" th:src="'/'+${commodityInfo.gimgurl}">
+            </td>
+            <td th:text="${commodityInfo.gname}"></td>
+            <td th:text="${commodityInfo.gprice}"></td>
+            <td th:text="${commodityInfo.gclass}"></td>
+            <td th:text="${commodityInfo.gamount}"></td>
+            <td th:text="${commodityInfo.gdate}"></td>
+            <td th:text="${commodityInfo.glook}"></td>
+            <td th:text="${commodityInfo.gintro}"></td>
+            <td th:text="${commodityInfo.gbrief}"></td>
+            <td><a th:href="'/commodity/addOrder?uid='+${#session.getAttribute('user').uid}+'&gid='+${commodityInfo.gid}">添加到购物车</a></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

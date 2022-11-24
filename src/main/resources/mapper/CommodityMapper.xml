@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="icu.javacg.mapper.CommodityMapper">
+
+<!--    &lt;!&ndash;    List<Commodity> getAllCommodity();&ndash;&gt;-->
+<!--    <select id="getAllCommodity" resultType="icu.javacg.pojo.Commodity">-->
+<!--        select * from commodity-->
+<!--    </select>-->
+
+<!--    &lt;!&ndash;    List<Commodity> getCommodityByCondition(@Param("commodity") Commodity commodity);&ndash;&gt;-->
+<!--    <select id="getCommodityByCondition" resultType="icu.javacg.pojo.Commodity">-->
+<!--        select * from commodity-->
+<!--        <where>-->
+<!--            <if test="commodity.gid != null and commodity.gid != ''">-->
+<!--                gid = #{commodity.gid}-->
+<!--            </if>-->
+<!--            <if test="commodity.gname != null and commodity.gname != ''">-->
+<!--                and gname = #{commodity.gname}-->
+<!--            </if>-->
+<!--            <if test="commodity.gprice != null and commodity.gprice != ''">-->
+<!--                and gprice = #{commodity.gprice}-->
+<!--            </if>-->
+<!--            <if test="commodity.gclass != null and commodity.gclass != ''">-->
+<!--                and gclass = #{commodity.gclass}-->
+<!--            </if>-->
+<!--            <if test="commodity.gamount != null and commodity.gamount != ''">-->
+<!--                and gamount = #{commodity.gamount}-->
+<!--            </if>-->
+<!--            <if test="commodity.gdate != null and commodity.gdate != ''">-->
+<!--                and gdate = #{commodity.gdate}-->
+<!--            </if>-->
+<!--            <if test="commodity.gimgurl != null and commodity.gimgurl != ''">-->
+<!--                and gimgurl = #{commodity.gimgurl}-->
+<!--            </if>-->
+<!--            <if test="commodity.glook != null and commodity.glook != ''">-->
+<!--                and glook = #{commodity.glook}-->
+<!--            </if>-->
+<!--            <if test="commodity.gintro != null and commodity.gintro != ''">-->
+<!--                and gintro = #{commodity.gintro}-->
+<!--            </if>-->
+<!--            <if test="commodity.gbrief != null and commodity.gbrief != ''">-->
+<!--                and gbrief = #{commodity.gbrief}-->
+<!--            </if>-->
+<!--        </where>-->
+<!--    </select>-->
+
+<!--&lt;!&ndash;    List<Commodity> getCommodityByName(@Param("name") String name);&ndash;&gt;-->
+<!--    <select id="getCommodityByName" resultType="icu.javacg.pojo.Commodity">-->
+<!--        select * from commodity where gname like '%${name}%'-->
+<!--    </select>-->
+
+<!--    &lt;!&ndash;    Integer updateCommodity(@Param("commodity") Commodity commodity);&ndash;&gt;-->
+<!--    <update id="updateCommodity">-->
+<!--        update commodity-->
+<!--        <trim prefix="set" suffixOverrides=",">-->
+<!--            <if test="commodity.gname != null and commodity.gname != ''">-->
+<!--                 gname = #{commodity.gname},-->
+<!--            </if>-->
+<!--            <if test="commodity.gprice != null and commodity.gprice != ''">-->
+<!--                 gprice = #{commodity.gprice},-->
+<!--            </if>-->
+<!--            <if test="commodity.gclass != null and commodity.gclass != ''">-->
+<!--                 gclass = #{commodity.gclass},-->
+<!--            </if>-->
+<!--            <if test="commodity.gamount != null and commodity.gamount != ''">-->
+<!--                 gamount = #{commodity.gamount},-->
+<!--            </if>-->
+<!--            <if test="commodity.gdate != null and commodity.gdate != ''">-->
+<!--                 gdate = #{commodity.gdate},-->
+<!--            </if>-->
+<!--            <if test="commodity.gimgurl != null and commodity.gimgurl != ''">-->
+<!--                 gimgurl = #{commodity.gimgurl},-->
+<!--            </if>-->
+<!--            <if test="commodity.glook != null and commodity.glook != ''">-->
+<!--                 glook = #{commodity.glook},-->
+<!--            </if>-->
+<!--            <if test="commodity.gintro != null and commodity.gintro != ''">-->
+<!--                 gintro = #{commodity.gintro},-->
+<!--            </if>-->
+<!--            <if test="commodity.gbrief != null and commodity.gbrief != ''">-->
+<!--                 gbrief = #{commodity.gbrief},-->
+<!--            </if>-->
+<!--        </trim>-->
+<!--        where gid = #{commodity.gid}-->
+<!--    </update>-->
+
+</mapper>

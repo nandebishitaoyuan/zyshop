@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <style>
+        a{
+            color: #333333;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div th:if="${#session.getAttribute('user')} == null">
+    <a th:href="@{/}">[请登录]</a>
+</div>
+<div th:if="${#session.getAttribute('user')} != null">
+    <h1>欢迎&nbsp;[[${#session.getAttribute('user').uname}]]</h1>
+    <a th:href="@{/commodity/allCommodity}">查看商品</a>
+    <a th:href="'/orderGoods/all?id='+${#session.getAttribute('user').uid}">查看购物车</a>
+    <a th:href="@{/user/update}">修改资料</a>
+</div>
+</body>
+</html>

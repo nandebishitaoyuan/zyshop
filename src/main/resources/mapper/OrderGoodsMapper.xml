@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="icu.javacg.mapper.OrderGoodsMapper">
+
+
+    <resultMap id="orderGoodsByUid" type="icu.javacg.pojo.OrderGoods">
+        <id column="ogid" property="ogid"/>
+        <result column="oid" property="oid"/>
+        <result column="uid" property="uid"/>
+        <result column="oid" property="oid"/>
+        <result column="gid" property="gid"/>
+        <result column="ogamount" property="ogamount"/>
+        <result column="ogtotalprice" property="ogtotalprice"/>
+        <association property="commodity" javaType="icu.javacg.pojo.Commodity">
+            <id column="gid" property="gid"/>
+            <result column="gname" property="gname"/>
+            <result column="gprice" property="gprice"/>
+            <result column="gclass" property="gclass"/>
+            <result column="gamount" property="gamount"/>
+            <result column="gdate" property="gdate"/>
+            <result column="gimgurl" property="gimgurl"/>
+            <result column="glook" property="glook"/>
+            <result column="gintro" property="gintro"/>
+            <result column="gbrief" property="gbrief"/>
+        </association>
+    </resultMap>
+
+<!--    List<String> getOrderGoodsInfo(Integer uid);-->
+<select id="getOrderGoodsInfo" resultMap="orderGoodsByUid">
+    SELECT * FROM ordergoods NATURAL JOIN commodity  WHERE ordergoods.uid=#{uid}<!-- AND ordergoods.isdelete=0-->
+</select>
+
+</mapper>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="icu.javacg.mapper.OrderMapper">
+
+    <!--    List<Order> getOrderByUid(Order order);
+    <select id="getOrderByUid" resultType="icu.javacg.pojo.Order">
+        select * from order
+        <where>
+            <if test="order.oid != null and order.oid != ''">
+                oid = #{order.oid}
+            </if>
+            <if test="order.odate != null and order.odate != ''">
+                and odate = #{order.odate}
+            </if>
+            <if test="order.aid != null and order.aid != ''">
+                and aid = #{order.aid}
+            </if>
+            <if test="order.ostate != null and order.ostate != ''">
+                and ostate = #{order.ostate}
+            </if>
+            <if test="order.orecname != null and order.orecname != ''">
+                and orecname = #{order.orecname}
+            </if>
+            <if test="order.orecadr != null and order.orecadr != ''">
+                and orecadr = #{order.orecadr}
+            </if>
+            <if test="order.orectel != null and order.orectel != ''">
+                and orectel = #{order.orectel}
+            </if>
+            <if test="order.uid != null and order.uid != ''">
+                and uid = #{order.uid}
+            </if>
+            <if test="order.ototalprice != null and order.ototalprice != ''">
+                and ototalprice = #{order.ototalprice}
+            </if>
+        </where>
+    </select>
+
+    &lt;!&ndash;    int deleteOrder(int id);&ndash;&gt;
+    <delete id="deleteOrder">
+        delete from order where oid = #{id}
+    </delete>
+
+    &lt;!&ndash;    int addOrder(Order order);&ndash;&gt;
+    <insert id="addOrder">
+        insert into orderinfo(odate,aid,ostate,orecname,orecadr,orectel,uid)
+        values (#{order.odate}, #{order.aid}, #{order.ostate}, #{order.orecname}, #{order.orecadr}, #{order.orectel}, #{order.uid}, #{order.ototalprice}, )
+    </insert>
+
+    &lt;!&ndash;    int updateOrder(Order order);&ndash;&gt;
+    <update id="updateOrder">
+        update order
+        <trim prefix="set" suffixOverrides=",">
+            <if test="order.odate != null and order.odate != ''">
+                odate = #{order.odate},
+            </if>
+            <if test="order.aid != null and order.aid != ''">
+                aid = #{order.aid},
+            </if>
+            <if test="order.ostate != null and order.ostate != ''">
+                ostate = #{order.ostate},
+            </if>
+            <if test="order.orecname != null and order.orecname != ''">
+                orecname = #{order.orecname},
+            </if>
+            <if test="order.orecadr != null and order.orecadr != ''">
+                orecadr = #{order.orecadr},
+            </if>
+            <if test="order.orectel != null and order.orectel != ''">
+                orectel = #{order.orectel},
+            </if>
+            <if test="order.uid != null and order.uid != ''">
+                uid = #{order.uid},
+            </if>
+            <if test="order.ototalprice != null and order.ototalprice != ''">
+                ototalprice = #{order.ototalprice},
+            </if>
+        </trim>
+        where oid = #{order.oid}
+    </update>-->
+
+
+</mapper>
